@@ -1,7 +1,5 @@
 package br.com.datastructure.binarytree;
 
-import java.util.Objects;
-
 public class Node {
 
     private final int data;
@@ -32,5 +30,10 @@ public class Node {
 
     public int getData() {
         return data;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" + "data=" + data + '}';
     }
 }

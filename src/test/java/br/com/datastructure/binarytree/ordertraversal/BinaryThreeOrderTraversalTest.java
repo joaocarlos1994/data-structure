@@ -21,6 +21,6 @@ public class BinaryThreeOrderTraversalTest {
         binaryThreeOrderTraversal.addNode(new Node(9));
         binaryThreeOrderTraversal.addNode(new Node(10));
 
-        binaryThreeOrderTraversal.printLevelOrder();
+        Assert.assertEquals("6 4 8 3 5 7 9 10 ",  binaryThreeOrderTraversal.printLevelOrder());
     }
 }

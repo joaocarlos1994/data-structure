@@ -7,24 +7,31 @@ import java.util.Objects;
 
 public class BinaryThreeOrderTraversal extends BinaryThreeDepth {
 
-    public void printLevelOrder() {
+    public String printLevelOrder() {
         int h = maxDepth(node);
         String currentPrintLevel = "";
         for (int i = 1; i <= h; i++) {
-            printGivenLevel(node, i, currentPrintLevel);
+            currentPrintLevel += printGivenLevel(node, i);
         }
+        return currentPrintLevel;
     }
 
-    public void  printGivenLevel (final Node root, final int level, final String currentPrintLevel) {
+    public String printGivenLevel(final Node root, final int level) {
+        String leftPrint = null;
+        String rightPrint = null;
+
         if (Objects.isNull(root)) {
-            return;
+            return "";
         }
+
         if (level == 1) {
-            System.out.print(root.getData() + " ");
+            return root.getData() + " ";
         } else if (level > 1) {
-            printGivenLevel(root.getLeft(), level - 1, currentPrintLevel);
-            printGivenLevel(root.getRight(), level - 1, currentPrintLevel);
+            leftPrint = printGivenLevel(root.getLeft(), level - 1);
+            rightPrint = printGivenLevel(root.getRight(), level - 1);
         }
+
+        return leftPrint + rightPrint;
     }
 
 }
