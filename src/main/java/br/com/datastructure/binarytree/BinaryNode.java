@@ -1,30 +1,30 @@
 package br.com.datastructure.binarytree;
 
-public class Node {
+public class BinaryNode {
 
     private final int data;
-    private Node right;
-    private Node left;
+    private BinaryNode right;
+    private BinaryNode left;
 
-    public Node(int data) {
+    public BinaryNode(int data) {
         this.data = data;
         this.right = null;
         this.left = null;
     }
 
-    public void addLeftNode(final Node node) {
-        this.left = node;
+    public void addLeftNode(final BinaryNode binaryNode) {
+        this.left = binaryNode;
     }
 
-    public void addRightNode(final Node node) {
-        this.right = node;
+    public void addRightNode(final BinaryNode binaryNode) {
+        this.right = binaryNode;
     }
 
-    public Node getRight() {
+    public BinaryNode getRight() {
         return right;
     }
 
-    public Node getLeft() {
+    public BinaryNode getLeft() {
         return left;
     }
 

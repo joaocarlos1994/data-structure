@@ -1,22 +1,22 @@
 package br.com.datastructure.binarytree.read;
 
 import br.com.datastructure.binarytree.AbstractTree;
-import br.com.datastructure.binarytree.Node;
+import br.com.datastructure.binarytree.BinaryNode;
 
 import java.util.Objects;
 
 public class BinaryTreeRead extends AbstractTree {
 
     public void read() {
-        read(node);
+        read(binaryNode);
     }
 
-    private void read(final Node node) {
-        if (Objects.nonNull(node)) {
-            System.out.print(String.format("%s", node.getData()));
+    private void read(final BinaryNode binaryNode) {
+        if (Objects.nonNull(binaryNode)) {
+            System.out.print(String.format("%s", binaryNode.getData()));
             System.out.print("(");
-            read(node.getLeft());
-            read(node.getRight());
+            read(binaryNode.getLeft());
+            read(binaryNode.getRight());
             System.out.print(")");
         }
     }
