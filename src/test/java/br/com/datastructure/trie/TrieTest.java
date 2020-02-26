@@ -1,6 +1,7 @@
 package br.com.datastructure.trie;
 
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -15,35 +16,29 @@ import java.util.stream.Stream;
 public class TrieTest {
 
     @Test
-    public void testTrie() {
-        final String keys[] = {"the", "a", "there", "answer", "any", "by", "bye", "their"};
-        final String output[] = {"Not present in trie", "Present in trie"};
-
-        final Trie trie = new Trie();
-        for (final String word :  keys) {
-            trie.insert(word);
-        }
-
-        // Search for different keys
-        if(trie.search("the") == true)
-            System.out.println("the --- " + output[1]);
-        else System.out.println("the --- " + output[0]);
-
-    }
-
-    @Test
     public void testOne() {
         final Trie trie = new Trie();
         final String keys[][] = { {"add", "s"},{"add", "ss"}, {"add", "sss"}, {"add", "ssss"}, {"add", "sssss"}, {"find", "s"}, {"find", "ss"}, {"find", "sss"},{"find", "ssss"}, {"find", "sssss"}, {"find", "ssssss"}};
-        //final String keys[][] = { {"add", "eouecvksgllpvfxfvndu"}, {"find", "zivh"}, {"add", "uugxgcrtujxzyjysqrhu"}, {"find", "ccyc"}};
 
         final int[] results = trie.execute(keys);
+        final int[] expected = {5, 4, 3, 2, 1, 0};
+        Assert.assertArrayEquals(expected, results);
     }
 
     @Test
-    public void testTwo() throws IOException {
+    public void testTwo() {
         final Trie trie = new Trie();
-        final Path path = Paths.get("C:\\Users\\Dell\\Documents\\input-5.txt");
+        final String keys[][] = { {"add", "hack"}, {"add", "hackerrank"}, {"find", "hac"}, {"find", "hak"}};
+
+        final int[] results = trie.execute(keys);
+        final int[] expected = {2, 0};
+        Assert.assertArrayEquals(expected, results);
+    }
+
+    @Test
+    public void testThree() throws IOException {
+        final Trie trie = new Trie();
+        final Path path = Paths.get("src/main/resources/input-6.txt");
         int lineCount = (int) Files.lines(path).count();
         final String keys[][] = new String[lineCount][lineCount];
 
@@ -58,7 +53,6 @@ public class TrieTest {
         }
 
         final int[] results = trie.execute(keys);
-        Arrays.stream(results).forEach(System.out::println);
     }
 
 }

@@ -1,13 +1,20 @@
 package br.com.datastructure.trie;
 
+import java.util.Arrays;
+
 public class TrieNode {
 
     private final TrieNode[] children = new TrieNode[26];
     private boolean isEndOfWord;
-    private int countElements = 0;
+    private int countElements = 1;
 
     public TrieNode() {
         isEndOfWord = false;
+    }
+
+    public TrieNode(final int countElements) {
+        isEndOfWord = false;
+        this.countElements = countElements;
     }
 
     public void setEndOfWord(final boolean endOfWord) {
@@ -19,7 +26,6 @@ public class TrieNode {
     }
 
     public TrieNode addNode(final int index) {
-        this.countElements += 1;
         this.children[index] = new TrieNode();
         return this.children[index];
     }
