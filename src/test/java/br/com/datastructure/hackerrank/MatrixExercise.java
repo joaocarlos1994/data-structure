@@ -1,4 +1,4 @@
-package br.com.datastructure;
+package br.com.datastructure.hackerrank;
 
 import org.junit.jupiter.api.Test;
 
