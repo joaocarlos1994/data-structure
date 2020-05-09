@@ -1,8 +1,11 @@
-package br.com.datastructure.hackerrank;
+package br.com.datastructure;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+/**
+ * <i>https://www.hackerrank.com/challenges/arrays-ds/problem</i>
+ * */
 public class ArraysDS {
 
     @Test

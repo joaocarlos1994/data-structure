@@ -1,4 +1,4 @@
-package br.com.datastructure.hackerrank;
+package br.com.datastructure;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
+/**
+ * <i>https://www.hackerrank.com/challenges/array-left-rotation/problem</i>
+ * */
 public class LeftRotation {
 
     //FIXME: Exits a A Juggling Algorithm to move left

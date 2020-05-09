@@ -1,7 +1,5 @@
 package br.com.datastructure.trie;
 
-import java.util.Arrays;
-
 public class TrieNode {
 
     private final TrieNode[] children = new TrieNode[26];

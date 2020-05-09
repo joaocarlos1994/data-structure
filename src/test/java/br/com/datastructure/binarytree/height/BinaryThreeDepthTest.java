@@ -5,6 +5,9 @@ import br.com.datastructure.binarytree.BinaryNode;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+/**
+ * <i>https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree</i>
+ * */
 public class BinaryThreeDepthTest {
 
     @Test
