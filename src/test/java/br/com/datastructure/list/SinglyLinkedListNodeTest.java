@@ -44,4 +44,28 @@ public class SinglyLinkedListNodeTest {
         insertNodeAtPosition(head, 1, 2);
     }
 
+    @Test
+    public void testFive() {
+        SinglyLinkedListNode head = insertNodeAtPosition(null, 7, 0);
+        insertNodeAtPosition(head, 11, 1);
+        insertNodeAtPosition(head, 12, 2);
+        insertNodeAtPosition(head, 8, 3);
+        insertNodeAtPosition(head, 16, 4);
+        insertNodeAtPosition(head, 5, 5);
+        insertNodeAtPosition(head, 18, 6);
+        deleteNode(head, 6);
+    }
+
+    @Test
+    public void testSix() {
+        SinglyLinkedListNode head = insertNodeAtPosition(null, 7, 0);
+        insertNodeAtPosition(head, 11, 1);
+        insertNodeAtPosition(head, 12, 2);
+        insertNodeAtPosition(head, 8, 3);
+        insertNodeAtPosition(head, 16, 4);
+        insertNodeAtPosition(head, 5, 5);
+        insertNodeAtPosition(head, 18, 6);
+        deleteNode(head, 0);
+    }
+
 }

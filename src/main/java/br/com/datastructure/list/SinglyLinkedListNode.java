@@ -57,4 +57,21 @@ public class SinglyLinkedListNode {
         }
         return head;
     }
+
+    public static SinglyLinkedListNode deleteNode(final SinglyLinkedListNode head, int position) {
+        if (position == 0) {
+            return head.next;
+        }
+        SinglyLinkedListNode previousNode = head;
+        for (int initialIndex = 0; initialIndex < position; initialIndex++) {
+            final SinglyLinkedListNode currentNode = previousNode.next;
+            if (initialIndex == (position - 1)) {
+                previousNode.next = currentNode.next;
+            } else {
+                previousNode = currentNode;
+            }
+        }
+        return head;
+    }
+
 }
