@@ -38,4 +38,23 @@ public class SinglyLinkedListNode {
         newNode.next = llist;
         return newNode;
     }
+
+    public static SinglyLinkedListNode insertNodeAtPosition(final SinglyLinkedListNode head, final int data, final int position) {
+        final SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+        if (position == 0 || head == null) {
+            return newNode;
+        }
+
+        SinglyLinkedListNode previousNode = head;
+        for (int initialIndex = 0; initialIndex < position; initialIndex++) {
+            final SinglyLinkedListNode currentNode = previousNode.next;
+            if (initialIndex == (position - 1)) {
+                previousNode.next = newNode;
+                newNode.next = currentNode;
+            } else {
+                previousNode = currentNode;
+            }
+        }
+        return head;
+    }
 }

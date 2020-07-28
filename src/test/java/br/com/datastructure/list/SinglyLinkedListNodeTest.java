@@ -2,8 +2,7 @@ package br.com.datastructure.list;
 
 import org.junit.jupiter.api.Test;
 
-import static br.com.datastructure.list.SinglyLinkedListNode.insertNodeAtHead;
-import static br.com.datastructure.list.SinglyLinkedListNode.insertNodeAtTailStructure;
+import static br.com.datastructure.list.SinglyLinkedListNode.*;
 
 public class SinglyLinkedListNodeTest {
 
@@ -35,6 +34,14 @@ public class SinglyLinkedListNodeTest {
         insertNodeAtHead(head, 164);
         insertNodeAtHead(head, 530);
         insertNodeAtHead(head, 474);
+    }
+
+    @Test
+    public void testFour() {
+        SinglyLinkedListNode head = insertNodeAtPosition(null, 16, 0);
+        insertNodeAtPosition(head, 13, 1);
+        insertNodeAtPosition(head, 7, 2);
+        insertNodeAtPosition(head, 1, 2);
     }
 
 }
